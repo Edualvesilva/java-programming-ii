@@ -1,3 +1,4 @@
+import java.util.HashMap;
 
 public class Book {
 
@@ -35,6 +36,10 @@ public class Book {
         this.contents = contents;
     }
 
+ 
+    
+    
+    
     public String toString() {
         return "Name: " + this.name + " (" + this.publicationYear + ")\n"
                 + "Contents: " + this.contents;
