@@ -27,6 +27,7 @@ public class Warehouse {
         return this.capacity - this.balance;
     }
 
+    
     public void addToWarehouse(double amount) {
         if (amount < 0) {
             return;
