@@ -17,15 +17,58 @@ public class MagicSquare {
 
     // implement these three methods
     public ArrayList<Integer> sumsOfRows() {
-        return new ArrayList<>();
+
+        ArrayList listSum = new ArrayList<>();
+
+        for (int row = 0; row < this.square.length; row++) {
+            int sum = 0;
+
+            for (int column = 0; column < this.square[row].length; column++) {
+                int value = this.square[row][column];
+                sum = sum + value;
+
+            }
+            listSum.add(sum);
+        }
+
+        return listSum;
     }
 
     public ArrayList<Integer> sumsOfColumns() {
-        return new ArrayList<>();
+
+        ArrayList listSum = new ArrayList<>();
+
+        for (int column = 0; column < this.square[0].length; column++) {
+            int sum = 0;
+            for (int row = 0; row < this.square.length; row++) {
+
+                int value = this.square[row][column];
+                sum = sum + value;
+
+            }
+            listSum.add(sum);
+        }
+
+        return listSum;
     }
 
     public ArrayList<Integer> sumsOfDiagonals() {
-        return new ArrayList<>();
+        ArrayList listSum = new ArrayList<>();
+        int n = this.square.length;
+        int sum = 0;
+        int sumDiag = 0;
+        for (int row = 0; row < this.square.length; row++) {
+
+            int value = this.square[row][row];
+            int diagonal = this.square[row][n - 1 - row];
+
+            sum = sum + value;
+            sumDiag = sumDiag + diagonal;
+
+        }
+        listSum.add(sum);
+        listSum.add(sumDiag);
+        return listSum;
     }
 
     // ready-made helper methods -- don't touch these
